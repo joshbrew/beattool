@@ -1,6 +1,6 @@
 {
   "name": "beattool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Barebones esbuild and test node server implementation. For building",
   "main": "./dist/audiosync.js",
   "module": "./dist/audiosync.esm.js",
