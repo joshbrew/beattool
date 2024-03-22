@@ -2,6 +2,8 @@
 
 ## Overview
 
+Live example: https://beattool.netlify.app/
+
 `npm i beattool`
 
 `import {AudioSync} from 'beattool`
