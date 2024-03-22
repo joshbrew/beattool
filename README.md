@@ -10,7 +10,7 @@ Live example: https://beattool.netlify.app/
 
 The `beattool` library is a tool for synchronizing audio playback with events on specific time intervals and signatures. Utilizing the Howler.js library for audio control and a web-worker hack for browser timers to keep events synced, this class enables the creation of dynamic audio experiences in web applications.
 
-### Dependencies
+### (Dev) Dependencies
 
 - **Howler.js**: A JavaScript library for audio playback. Ensure you include Howler.js in your project to use the `AudioSync` class.
 - **HackTimer.js**: An optional dependency for improving timer precision and ensuring functionality when the browser tab is not in focus.
