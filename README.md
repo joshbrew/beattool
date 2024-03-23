@@ -7,7 +7,7 @@
 
 `npm i beattool`
 
-`import {AudioSync} from 'beattool`
+`import {AudioSync} from 'beattool'`
 
 The `beattool` library is a tool for synchronizing audio playback with events on specific time intervals and signatures. Utilizing the Howler.js library for audio control and a web-worker hack for browser timers to keep events synced, this class enables the creation of dynamic audio experiences in web applications.
 
