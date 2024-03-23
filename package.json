@@ -1,6 +1,6 @@
 {
   "name": "beattool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Barebones esbuild and test node server implementation. For building",
   "main": "./dist/audiosync.js",
   "module": "./dist/audiosync.esm.js",
@@ -27,7 +27,7 @@
   ],
   "author": "",
   "license": "",
-  "dependencies": {
+  "devDependencies": {
     "@types/howler": "^2.2.11",
     "howler": "^2.2.4"
   },
