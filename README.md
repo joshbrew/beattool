@@ -8,12 +8,6 @@
 
 The `beattool` library is a tool for synchronizing audio playback with events on specific time intervals and signatures. Utilizing the Howler.js library for audio control and a web-worker hack for browser timers to keep events synced, this class enables the creation of dynamic audio experiences in web applications.
 
-### Dependencies
-
-- **Howler.js**: A JavaScript library for audio playback. Ensure you include Howler.js in your project to use the `AudioSync` class.
-- **HackTimer.js**: An optional dependency for improving timer precision and ensuring functionality when the browser tab is not in focus.
-
-
 ### Methods
 
 #### BeatSettings
@@ -183,7 +177,7 @@ const beatSettings = {
         repeatEvery:1600, //time from the start of the previous subinterval not the end
         repeatUntil:3800 //dont play after this time (else repeatEvery continues till song ends)
     },
-    5800:{ //This could also be defined as 00:05.800 like a clock
+    '00:05.800':{ //This could also be defined as 00:05.800 like a clock
         interval: '1/4', // e.g quarter notes. Adjust this interval to match the beat of your sound
         //main interval and time signature adopted if not specified
         onBeat:(sound,now,startTime)=>{
@@ -218,7 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 
+### (Dev) Dependencies
 
+- **Howler.js**: A JavaScript library for audio playback. Ensure you include Howler.js in your project to use the `AudioSync` class.
+- **HackTimer.js**: An optional dependency for improving timer precision and ensuring functionality when the browser tab is not in focus.
 
 
 ## Build and run sample
