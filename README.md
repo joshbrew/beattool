@@ -217,8 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ### (Dev) Dependencies
 
-- **Howler.js**: A JavaScript library for audio playback. Ensure you include Howler.js in your project to use the `AudioSync` class.
-- **HackTimer.js**: An optional dependency for improving timer precision and ensuring functionality when the browser tab is not in focus.
+- [**Howler.js**](https://howlerjs.com/): A JavaScript library for audio playback. Ensure you include Howler.js in your project to use the `AudioSync` class.
+- [**HackTimer.js**](https://github.com/turuslan/HackTimer): For improving timer precision and ensuring functionality when the browser tab is not in focus.
 
 
 ## Build and run sample
