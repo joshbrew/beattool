@@ -11,7 +11,7 @@ export type BeatSettings = {
     tempo?: number; //tempo in bpm
     onBeat?: (sound: any, now: number, startTime: number, intervals: any) => void; //event callback fired at the interval based on time from song start
 } & { //sub interval keys defined as numbers which are milliseconds from the start of the song
-    [key:string]:{ 
+    [key:string]:{  //animation keys should be in a clock format e.g. 00:00:00.000 or the millisecond value
         interval: Timing; //timing interval in ms or generic signature string `${number}/${number}`
         tempo?: number; //tempo in bpm
         duration?: number; //duration ms
@@ -89,7 +89,22 @@ export class AudioSync {
                 }
             });
     
-            keys = Object.keys(temp).map((v) => parseFloat(v)).sort((a,b) => a - b); 
+            keys = Object.keys(temp).map((v,i) => {
+                if(v.includes(':')) { //supports e.g. 00:00:00.0000 syntax
+                    let split = v.split(':');
+                    let ms = 0;
+
+                    let multiplier = 1000;
+                    split.reverse().forEach((value,j) => {
+                        ms += parseFloat(value)*multiplier;
+                        multiplier *= 60;
+                    });
+                    temp[ms] = temp[v]; //set the temp to this
+                    delete temp[v];
+                    return ms;
+                }
+                else return parseFloat(v)
+            }).sort((a,b) => a - b); 
         }
 
         initKeys();

@@ -54,7 +54,7 @@ const beatSettings = {
         repeatEvery:1600, //time from the start of the previous subinterval not the end
         repeatUntil:3800 //dont play after this time (else repeatEvery continues till song ends)
     },
-    5800:{ //start here
+    '00:05.800':{ //start here
         interval: '1/4', // e.g quarter notes. Adjust this interval to match the beat of your sound
         //main interval and time signature adopted if not specified
         onBeat:(sound,now,startTime)=>{
