@@ -53,7 +53,7 @@ type BeatSettings = {
         //         toggleBeatColor();
         // },
         100:{ //the key is the start of the subinterval from song start, e.g. 100ms after begin
-            interval:'0.25/4',
+            interval:'1/16', //1/16th notes
             tempo:144,
             onBeat:() => {
                 console.timeEnd('da');
@@ -169,7 +169,7 @@ const beatSettings = {
     //         toggleBeatColor();
     // },
     100:{ //the key is the start of the subinterval from song start, e.g. 100ms after begin or say 00:00.100 can be used
-        interval:'0.25/4',
+        interval:'1/16', //1/16th notes
         tempo:144,
         onBeat:() => {
             console.timeEnd('da');
